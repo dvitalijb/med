@@ -343,6 +343,12 @@ body {
   max-width: 1920px;
   margin: 0 auto; }
 
+main {
+  margin-top: 195px; }
+  @media only screen and (min-width: 768px) {
+    main {
+      margin-top: 135px; } }
+
 .container {
   padding: 30px 15px;
   margin-right: auto;
@@ -594,7 +600,10 @@ p {
   justify-content: center; }
 
 .header {
-  overflow: hidden; }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
   .header .contacts {
     background-color: #3d5b99;
     height: 45px;
@@ -615,38 +624,40 @@ p {
         margin-right: 32px; }
       .header .contacts .container .wrapper-img a {
         font-size: 19px; }
-  .header .wrapper-nav .container {
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    .header .wrapper-nav .container .wrapper-logo {
+  .header .wrapper-nav {
+    background-color: #ffffff; }
+    .header .wrapper-nav .container {
+      height: 90px;
       display: flex;
-      align-items: center; }
-      .header .wrapper-nav .container .wrapper-logo svg {
-        fill: #3d5b99;
-        height: 60px;
-        width: 60px; }
-      .header .wrapper-nav .container .wrapper-logo .text-logo {
-        font-size: 35px;
-        line-height: 0.9;
-        color: #000000;
-        margin-left: 25px; }
-    .header .wrapper-nav .container .nav-desktop {
-      text-align: right; }
-      .header .wrapper-nav .container .nav-desktop .nav-item {
-        color: #000000;
-        margin-left: 25px; }
-        .header .wrapper-nav .container .nav-desktop .nav-item.active, .header .wrapper-nav .container .nav-desktop .nav-item:hover {
-          color: #3d5b99; }
-      @media only screen and (max-width: 1199px) {
+      align-items: center;
+      justify-content: space-between; }
+      .header .wrapper-nav .container .wrapper-logo {
+        display: flex;
+        align-items: center; }
+        .header .wrapper-nav .container .wrapper-logo svg {
+          fill: #3d5b99;
+          height: 60px;
+          width: 60px; }
+        .header .wrapper-nav .container .wrapper-logo .text-logo {
+          font-size: 35px;
+          line-height: 0.9;
+          color: #000000;
+          margin-left: 25px; }
+      .header .wrapper-nav .container .nav-desktop {
+        text-align: right; }
         .header .wrapper-nav .container .nav-desktop .nav-item {
-          margin-left: 10px;
-          font-size: 15px; } }
-      @media only screen and (max-width: 991px) {
-        .header .wrapper-nav .container .nav-desktop .nav-item {
-          margin-left: 4px;
-          font-size: 11px; } }
+          color: #000000;
+          margin-left: 25px; }
+          .header .wrapper-nav .container .nav-desktop .nav-item.active, .header .wrapper-nav .container .nav-desktop .nav-item:hover {
+            color: #3d5b99; }
+        @media only screen and (max-width: 1199px) {
+          .header .wrapper-nav .container .nav-desktop .nav-item {
+            margin-left: 10px;
+            font-size: 15px; } }
+        @media only screen and (max-width: 991px) {
+          .header .wrapper-nav .container .nav-desktop .nav-item {
+            margin-left: 4px;
+            font-size: 11px; } }
   @media only screen and (max-width: 767px) {
     .header .contacts,
     .header .wrapper-nav {
@@ -713,7 +724,7 @@ p {
     .header .mobile-header .side-panel {
       width: 0;
       position: fixed;
-      z-index: 1;
+      z-index: 3;
       height: 100%;
       top: 0;
       right: 0;
