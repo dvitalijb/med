@@ -343,12 +343,6 @@ body {
   max-width: 1920px;
   margin: 0 auto; }
 
-main {
-  margin-top: 195px; }
-  @media only screen and (min-width: 768px) {
-    main {
-      margin-top: 135px; } }
-
 .container {
   padding: 30px 15px;
   margin-right: auto;
@@ -385,18 +379,118 @@ main {
       border: none;
       padding: 0 20px;
       font-family: Roboto; }
-      .form-modal .input-wrapper input[type=text] {
+      .form-modal .input-wrapper input[type="text"] {
         background: #e9e9e9;
         font-size: 15px;
         line-height: 2; }
         @media only screen and (min-width: 1900px) {
-          .form-modal .input-wrapper input[type=text] {
+          .form-modal .input-wrapper input[type="text"] {
             font-size: 18px;
             line-height: 1.7; } }
       .form-modal .input-wrapper input:not(:last-child) {
         margin-bottom: 20px; }
       .form-modal .input-wrapper input:last-child {
         margin-top: 10px; }
+
+.main-block {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .main-block {
+      display: block;
+      background: radial-gradient(50.45% 193.65% at 49.55% 50.07%, #5980d0 0%, #3c62af 51.04%, #324c82 100%);
+      height: 555px; }
+      .main-block .container {
+        display: flex;
+        align-items: center; }
+        .main-block .container .img-wrapper {
+          margin: auto 86px 0 auto; }
+        .main-block .container .text-wrapper h1 {
+          margin-bottom: 50px; }
+        .main-block .container .text-wrapper .button.light {
+          width: auto; } }
+  @media only screen and (min-width: 992px) {
+    .main-block .container .text-wrapper .button.light {
+      width: 317px; } }
+  @media only screen and (min-width: 1900px) {
+    .main-block .container .img-wrapper {
+      margin-right: -45px; }
+    .main-block .container .text-wrapper .button.light {
+      width: 358px;
+      height: 65px; } }
+
+.form-wrapper {
+  display: none;
+  background-color: #ecf8fd; }
+  .form-wrapper .img-wrapper {
+    display: none; }
+  @media only screen and (min-width: 768px) {
+    .form-wrapper {
+      position: relative;
+      display: block; }
+      .form-wrapper .container {
+        padding-top: 50px;
+        padding-bottom: 50px; }
+        .form-wrapper .container h4 {
+          font-family: Roboto;
+          font-weight: 500;
+          font-size: 30px;
+          line-height: 1;
+          color: #3d5b99;
+          margin-bottom: 30px; }
+        .form-wrapper .container p {
+          font-weight: 300;
+          margin-bottom: 23px; }
+        .form-wrapper .container form {
+          display: flex;
+          flex-wrap: wrap; }
+          .form-wrapper .container form .input-wrapper {
+            width: 350px;
+            margin-bottom: 30px; }
+          .form-wrapper .container form input,
+          .form-wrapper .container form textarea {
+            border-radius: 10px;
+            background-color: #ffffff;
+            font-family: Roboto;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #5b5959;
+            border: none;
+            width: 360px;
+            height: 44px;
+            padding: 9px 20px; }
+          .form-wrapper .container form input:not(:last-child) {
+            margin-bottom: 18px; }
+          .form-wrapper .container form textarea {
+            width: 325px;
+            height: 182px;
+            margin: 0 auto 0 35px; }
+          .form-wrapper .container form .button-wrapper {
+            width: 100%; }
+            .form-wrapper .container form .button-wrapper button {
+              width: 360px; } }
+  @media only screen and (min-width: 1400px) {
+    .form-wrapper {
+      z-index: 0;
+      margin-bottom: 95px; }
+      .form-wrapper .img-wrapper {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -135px;
+        z-index: -1; }
+      .form-wrapper .container form {
+        z-index: 1; }
+        .form-wrapper .container form .input-wrapper {
+          width: 40%; }
+        .form-wrapper .container form input,
+        .form-wrapper .container form button {
+          width: 408px; }
+        .form-wrapper .container form .button-wrapper button {
+          width: 408px; } }
+  @media only screen and (min-width: 1900px) {
+    .form-wrapper .container form .input-wrapper {
+      width: 35%; } }
 
 @media only screen and (min-width: 768px) {
   .container {
@@ -502,7 +596,7 @@ p {
 .li-item {
   font-family: Roboto;
   font-size: 15px;
-  line-height: 1.1;
+  line-height: 1.16;
   color: #5b5959;
   position: relative;
   margin-left: 15px;
@@ -515,8 +609,7 @@ p {
     height: 5px;
     border-radius: 50%;
     left: -15px;
-    top: 50%;
-    transform: translateY(-50%); }
+    top: 5px; }
   @media only screen and (min-width: 1200px) {
     .li-item {
       font-size: 16px;
@@ -540,7 +633,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 34px; }
+  height: 34px;
+  border: none; }
   @media only screen and (min-width: 768px) {
     .button {
       font-size: 16px;
@@ -701,10 +795,11 @@ p {
       font-size: 18px; } }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
-  z-index: 2; }
+  z-index: 2;
+  overflow: hidden; }
   .header .contacts {
     background-color: #3d5b99;
     height: 45px;
@@ -861,6 +956,8 @@ p {
             font-weight: 700; }
           .header .mobile-header .side-panel .nav-sidebar .nav-item:not(:last-child) {
             margin-bottom: 11px; }
+      .header .mobile-header .side-panel .contact-wrapper {
+        height: 300px; }
       .header .mobile-header .side-panel h5.contact {
         font-weight: 500;
         margin: 30px 30px 20px;
@@ -881,38 +978,53 @@ p {
     @media only screen and (min-width: 768px) {
       .header .mobile-header {
         display: none; } }
+  .header.page-rheumatology .mobile-header .container .wrapper-header-image {
+    width: 176px;
+    height: 176px;
+    right: 5px;
+    left: auto;
+    bottom: 0;
+    top: initial; }
+    @media only screen and (min-width: 480px) {
+      .header.page-rheumatology .mobile-header .container .wrapper-header-image {
+        right: 36px; } }
+    @media only screen and (min-width: 576px) {
+      .header.page-rheumatology .mobile-header .container .wrapper-header-image {
+        right: 130px; } }
+  .header.page-rheumatology .mobile-header .container .wrapper-title h1 {
+    margin-top: 28px; }
 
-.form-wrapper {
+.main-block-form {
   background: radial-gradient(50.45% 193.65% at 49.55% 50.07%, #5980d0 0%, #3c62af 51.04%, #324c82 100%); }
-  .form-wrapper .container {
+  .main-block-form .container {
     height: 735px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    .form-wrapper .container .text-wrapper {
+    .main-block-form .container .text-wrapper {
       z-index: 1;
       width: 45%; }
-      .form-wrapper .container .text-wrapper p {
+      .main-block-form .container .text-wrapper p {
         font-size: 20px;
         line-height: 1.12;
         color: #ffffff;
         margin-top: 50px; }
         @media only screen and (max-width: 1199px) {
-          .form-wrapper .container .text-wrapper p {
+          .main-block-form .container .text-wrapper p {
             font-size: 12px;
             margin-top: 20px; } }
       @media only screen and (min-width: 1900px) {
-        .form-wrapper .container .text-wrapper h1 {
+        .main-block-form .container .text-wrapper h1 {
           font-size: 70px; }
-        .form-wrapper .container .text-wrapper p {
+        .main-block-form .container .text-wrapper p {
           font-size: 25px; } }
-    .form-wrapper .container .img-wrapper {
+    .main-block-form .container .img-wrapper {
       position: absolute;
       bottom: 0;
       right: 25px; }
   @media only screen and (max-width: 767px) {
-    .form-wrapper {
+    .main-block-form {
       display: none; } }
 
 .rheumatology {
@@ -1124,7 +1236,6 @@ p {
     display: block;
     position: absolute;
     content: "";
-    opacity: 0.5;
     width: 72px;
     height: 72px; }
   .high-quality::before {
@@ -1383,3 +1494,75 @@ p {
     .logos .container {
       padding-top: 100px;
       padding-bottom: 100px; } }
+
+.main-rheumatology img {
+  width: 100%; }
+
+.main-rheumatology .container .diseases-wrapper p {
+  margin-bottom: 14px; }
+
+.main-rheumatology .container .img-wrapper {
+  margin: 30px -15px; }
+
+.main-rheumatology .container .symptoms-wrapper .li-item {
+  margin-top: 14px;
+  line-height: 1.6;
+  margin-bottom: 0; }
+
+.main-rheumatology .container .bellow {
+  margin-top: 30px; }
+
+@media only screen and (min-width: 768px) {
+  .main-rheumatology .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .main-rheumatology .container .diseases-wrapper {
+      width: 46%; }
+      .main-rheumatology .container .diseases-wrapper p {
+        margin-bottom: 35px; }
+      .main-rheumatology .container .diseases-wrapper .diseases-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        .main-rheumatology .container .diseases-wrapper .diseases-items .li-item {
+          width: 47%;
+          margin-bottom: 10px; }
+    .main-rheumatology .container .img-wrapper {
+      margin: 0; }
+    .main-rheumatology .container .symptoms-wrapper {
+      margin: 25px auto;
+      width: 100%; }
+      .main-rheumatology .container .symptoms-wrapper p {
+        font-weight: 500; }
+      .main-rheumatology .container .symptoms-wrapper .symptoms-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        .main-rheumatology .container .symptoms-wrapper .symptoms-items .li-item {
+          width: 40%;
+          margin-top: 14px; }
+    .main-rheumatology .container .bellow {
+      margin: 0; } }
+
+@media only screen and (min-width: 992px) {
+  .main-rheumatology .container {
+    padding-top: 100px;
+    padding-bottom: 80px; }
+    .main-rheumatology .container .diseases-wrapper {
+      width: 60%; }
+      .main-rheumatology .container .diseases-wrapper .diseases-items .li-item {
+        margin-bottom: 17px; }
+    .main-rheumatology .container .symptoms-wrapper {
+      margin: 65px auto; }
+      .main-rheumatology .container .symptoms-wrapper p {
+        margin-bottom: 30px; }
+      .main-rheumatology .container .symptoms-wrapper .li-item {
+        margin-top: 18px; }
+    .main-rheumatology .container .bellow {
+      margin-top: 40px;
+      line-height: 2; } }
+
+@media only screen and (min-width: 1600px) {
+  .main-rheumatology .container .bellow {
+    margin: 0; } }
