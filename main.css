@@ -798,8 +798,7 @@ p {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 2;
-  overflow: hidden; }
+  z-index: 2; }
   .header .contacts {
     background-color: #3d5b99;
     height: 45px;
