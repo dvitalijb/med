@@ -398,12 +398,13 @@ body {
   @media only screen and (min-width: 768px) {
     .main-block {
       display: block;
-      background: radial-gradient(50.45% 193.65% at 49.55% 50.07%, #5980d0 0%, #3c62af 51.04%, #324c82 100%);
-      height: 555px; }
+      background: radial-gradient(50.45% 193.65% at 49.55% 50.07%, #5980d0 0%, #3c62af 51.04%, #324c82 100%); }
       .main-block .container {
         display: flex;
         align-items: center;
-        padding-top: 0; }
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 555px; }
         .main-block .container .img-wrapper {
           margin: auto 86px 0 auto; }
         .main-block .container .text-wrapper h1 {
@@ -426,6 +427,12 @@ body {
     .main-block.main-immunology .container .img-wrapper {
       margin-left: auto;
       margin-right: -107px; } }
+  @media only screen and (min-width: 1400px) {
+    .main-block.main-allergology .container .img-wrapper {
+      margin-right: -24px; } }
+  @media only screen and (min-width: 1900px) {
+    .main-block.main-allergology .container .img-wrapper {
+      margin-right: -108px; } }
 
 .form-wrapper {
   display: none;
@@ -491,7 +498,9 @@ body {
       .form-wrapper .container form {
         z-index: 1; }
         .form-wrapper .container form .input-wrapper {
-          width: 40%; }
+          width: 38%; }
+        .form-wrapper .container form textarea {
+          margin: 0; }
         .form-wrapper .container form input,
         .form-wrapper .container form button {
           width: 408px; }
@@ -499,7 +508,9 @@ body {
           width: 408px; } }
   @media only screen and (min-width: 1900px) {
     .form-wrapper .container form .input-wrapper {
-      width: 35%; } }
+      width: 35%; }
+    .form-wrapper .container form textarea {
+      margin-left: 35px; } }
 
 @media only screen and (min-width: 768px) {
   .container {
@@ -602,7 +613,8 @@ p {
       text-decoration-line: none;
       line-height: 46px; } }
 
-.li-item {
+.li-item,
+.sub-item {
   font-family: Roboto;
   font-size: 15px;
   line-height: 1.16;
@@ -610,7 +622,8 @@ p {
   position: relative;
   margin-left: 15px;
   margin-bottom: 11px; }
-  .li-item::before {
+  .li-item::before,
+  .sub-item::before {
     content: "";
     position: absolute;
     background-color: #3d5b99;
@@ -619,18 +632,27 @@ p {
     border-radius: 50%;
     left: -15px;
     top: 5px; }
+  .li-item .sub-item::before,
+  .sub-item .sub-item::before {
+    background-color: #ffffff;
+    border: 1px solid #3d5b99;
+    width: 4px;
+    height: 4px; }
   @media only screen and (min-width: 1200px) {
-    .li-item {
+    .li-item,
+    .sub-item {
       font-size: 16px;
       font-size: 16px;
       margin-bottom: 17px;
       margin-left: 20px; }
-      .li-item::before {
+      .li-item::before,
+      .sub-item::before {
         width: 9px;
         height: 9px;
         left: -20px; } }
   @media only screen and (min-width: 1200px) {
-    .li-item {
+    .li-item,
+    .sub-item {
       margin-bottom: 20px; } }
 
 .button {
@@ -1666,3 +1688,130 @@ p {
       display: inline-block; }
     .content-immunology .container .symptoms-wrapper {
       margin-top: 55px; } }
+
+.content-allergology .container .img-small,
+.content-allergology .container .img-yel {
+  margin: 30px -15px; }
+  .content-allergology .container .img-small img,
+  .content-allergology .container .img-yel img {
+    width: 100%; }
+
+.content-allergology .container .img-big {
+  display: none; }
+
+.content-allergology .container .addition {
+  display: none; }
+
+.content-allergology .container .title,
+.content-allergology .container span {
+  font-weight: 500; }
+
+.content-allergology .container p:not(:last-child) {
+  margin-bottom: 20px; }
+
+.content-allergology .container .title {
+  margin-bottom: 10px; }
+  .content-allergology .container .title.second {
+    margin-top: 30px;
+    margin-bottom: 8px; }
+
+.content-allergology .container .items-reasons .li-item,
+.content-allergology .container .items-reasons .sub-item,
+.content-allergology .container .disease-items .li-item,
+.content-allergology .container .disease-items .sub-item {
+  margin-bottom: 13px;
+  line-height: 1.6; }
+  .content-allergology .container .items-reasons .li-item::before,
+  .content-allergology .container .items-reasons .sub-item::before,
+  .content-allergology .container .disease-items .li-item::before,
+  .content-allergology .container .disease-items .sub-item::before {
+    top: 9px; }
+
+.content-allergology .container .items-reasons .li-item.none-before::before,
+.content-allergology .container .disease-items .li-item.none-before::before {
+  display: none; }
+
+.content-allergology .container .disease-items {
+  margin-bottom: 30px; }
+
+@media only screen and (min-width: 768px) {
+  .content-allergology .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .content-allergology .container .allergist {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .content-allergology .container .allergist p {
+        width: 100%; }
+    .content-allergology .container .img-big {
+      display: block;
+      margin: auto; }
+    .content-allergology .container .img-small {
+      display: none; }
+    .content-allergology .container .title {
+      margin-top: 60px; }
+      .content-allergology .container .title.second {
+        margin-top: 80px;
+        margin-bottom: 33px; }
+    .content-allergology .container .reasons-wraper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px; }
+      .content-allergology .container .reasons-wraper .items-reasons {
+        width: 47%; }
+        .content-allergology .container .reasons-wraper .items-reasons .li-item {
+          margin-bottom: 17px; }
+    .content-allergology .container .img-yel {
+      margin: auto;
+      width: 24%; }
+    .content-allergology .container .addition {
+      display: block;
+      width: 72%;
+      margin-top: 28px; }
+      .content-allergology .container .addition + .title {
+        margin-top: 50px;
+        margin-bottom: 35px; }
+    .content-allergology .container .disease-items {
+      margin-bottom: 20px; }
+      .content-allergology .container .disease-items .li-item {
+        margin-bottom: 21px; }
+    .content-allergology .container p:last-child {
+      margin-top: 10px; } }
+
+@media only screen and (min-width: 992px) {
+  .content-allergology .container {
+    padding-top: 100px;
+    padding-bottom: 160px; }
+    .content-allergology .container .allergist {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .content-allergology .container .allergist p {
+        width: 53%; } }
+
+@media only screen and (min-width: 1200px) {
+  .content-allergology .container .allergist p {
+    width: 63%; }
+    .content-allergology .container .allergist p:last-child {
+      margin-top: -25px; } }
+
+@media only screen and (min-width: 1900px) {
+  .content-allergology .container {
+    padding-bottom: 120px; }
+    .content-allergology .container .allergist .title {
+      margin-top: 44px; }
+    .content-allergology .container .allergist p:last-child {
+      width: 100%;
+      margin-top: 5px; }
+    .content-allergology .container .img-yel {
+      width: 31%;
+      margin: 0; }
+    .content-allergology .container .addition {
+      width: 64%;
+      margin-top: 12px; }
+      .content-allergology .container .addition + .title {
+        margin-top: 35px; }
+    .content-allergology .container .disease-items .li-item {
+      margin-bottom: 16px; } }
