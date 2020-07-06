@@ -393,7 +393,8 @@ body {
         margin-top: 10px; }
 
 .main-block {
-  display: none; }
+  display: none;
+  overflow: hidden; }
   @media only screen and (min-width: 768px) {
     .main-block {
       display: block;
@@ -401,7 +402,8 @@ body {
       height: 555px; }
       .main-block .container {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        padding-top: 0; }
         .main-block .container .img-wrapper {
           margin: auto 86px 0 auto; }
         .main-block .container .text-wrapper h1 {
@@ -417,6 +419,13 @@ body {
     .main-block .container .text-wrapper .button.light {
       width: 358px;
       height: 65px; } }
+  @media only screen and (min-width: 1200px) {
+    .main-block.main-immunology .container .img-wrapper {
+      margin-left: 100px; } }
+  @media only screen and (min-width: 1900px) {
+    .main-block.main-immunology .container .img-wrapper {
+      margin-left: auto;
+      margin-right: -107px; } }
 
 .form-wrapper {
   display: none;
@@ -896,7 +905,8 @@ p {
             .header .mobile-header .container .wrapper-menu .menu .bar:not(:last-child) {
               margin-bottom: 5.5px; }
       .header .mobile-header .container .wrapper-title {
-        width: 50%; }
+        width: 50%;
+        z-index: 2; }
         .header .mobile-header .container .wrapper-title h1 {
           text-align: left;
           margin-top: 22px; }
@@ -993,6 +1003,18 @@ p {
         right: 130px; } }
   .header.page-rheumatology .mobile-header .container .wrapper-title h1 {
     margin-top: 28px; }
+  .header.page-immunology .mobile-header .container .wrapper-header-image {
+    width: 234px;
+    height: 172px;
+    top: -5px;
+    right: -4px;
+    left: auto; }
+    @media only screen and (min-width: 480px) {
+      .header.page-immunology .mobile-header .container .wrapper-header-image {
+        right: 36px; } }
+    @media only screen and (min-width: 576px) {
+      .header.page-immunology .mobile-header .container .wrapper-header-image {
+        right: 130px; } }
 
 .main-block-form {
   background: radial-gradient(50.45% 193.65% at 49.55% 50.07%, #5980d0 0%, #3c62af 51.04%, #324c82 100%); }
@@ -1498,79 +1520,149 @@ p {
       padding-top: 100px;
       padding-bottom: 100px; } }
 
-.main-rheumatology img {
+.content-rheumatology img {
   width: 100%; }
 
-.main-rheumatology .container .diseases-wrapper p {
+.content-rheumatology .container .diseases-wrapper p {
   margin-bottom: 14px; }
 
-.main-rheumatology .container .img-wrapper {
+.content-rheumatology .container .img-wrapper {
   margin: 30px -15px; }
 
-.main-rheumatology .container .symptoms-wrapper .li-item {
+.content-rheumatology .container .symptoms-wrapper .li-item {
   margin-top: 14px;
   line-height: 1.6;
   margin-bottom: 0; }
 
-.main-rheumatology .container .bellow {
+.content-rheumatology .container .bellow {
   margin-top: 30px; }
 
 @media only screen and (min-width: 768px) {
-  .main-rheumatology .container {
+  .content-rheumatology .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .main-rheumatology .container .diseases-wrapper {
+    .content-rheumatology .container .diseases-wrapper {
       width: 46%; }
-      .main-rheumatology .container .diseases-wrapper p {
+      .content-rheumatology .container .diseases-wrapper p {
         margin-bottom: 35px; }
-      .main-rheumatology .container .diseases-wrapper .diseases-items {
+      .content-rheumatology .container .diseases-wrapper .diseases-items {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between; }
-        .main-rheumatology .container .diseases-wrapper .diseases-items .li-item {
+        .content-rheumatology .container .diseases-wrapper .diseases-items .li-item {
           width: 47%;
           margin-bottom: 10px; }
-    .main-rheumatology .container .img-wrapper {
+    .content-rheumatology .container .img-wrapper {
       margin: 0; }
-    .main-rheumatology .container .symptoms-wrapper {
+    .content-rheumatology .container .symptoms-wrapper {
       margin: 25px auto;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between; }
-      .main-rheumatology .container .symptoms-wrapper p {
+      .content-rheumatology .container .symptoms-wrapper p {
         font-weight: 500;
         width: 100%;
         margin-bottom: 36px; }
-      .main-rheumatology .container .symptoms-wrapper .symptoms-items {
+      .content-rheumatology .container .symptoms-wrapper .symptoms-items {
         width: 38%; }
-        .main-rheumatology .container .symptoms-wrapper .symptoms-items .li-item {
+        .content-rheumatology .container .symptoms-wrapper .symptoms-items .li-item {
           margin-top: 0;
           margin-bottom: 22px; }
-          .main-rheumatology .container .symptoms-wrapper .symptoms-items .li-item::before {
+          .content-rheumatology .container .symptoms-wrapper .symptoms-items .li-item::before {
             top: 8px; }
-        .main-rheumatology .container .symptoms-wrapper .symptoms-items.first .li-item {
+        .content-rheumatology .container .symptoms-wrapper .symptoms-items.first .li-item {
           margin-bottom: 19px; }
-    .main-rheumatology .container .bellow {
+    .content-rheumatology .container .bellow {
       margin: 0; } }
 
 @media only screen and (min-width: 992px) {
-  .main-rheumatology .container {
+  .content-rheumatology .container {
     padding-top: 100px;
     padding-bottom: 160px; }
-    .main-rheumatology .container .diseases-wrapper {
+    .content-rheumatology .container .diseases-wrapper {
       width: 60%; }
-      .main-rheumatology .container .diseases-wrapper .diseases-items .li-item {
+      .content-rheumatology .container .diseases-wrapper .diseases-items .li-item {
         margin-bottom: 17px; }
-    .main-rheumatology .container .symptoms-wrapper {
+    .content-rheumatology .container .symptoms-wrapper {
       margin: 65px auto 0; }
-      .main-rheumatology .container .symptoms-wrapper .symptoms-items {
+      .content-rheumatology .container .symptoms-wrapper .symptoms-items {
         margin-right: 65px; }
-    .main-rheumatology .container .bellow {
+    .content-rheumatology .container .bellow {
       margin-top: 80px;
       line-height: 2; } }
 
 @media only screen and (min-width: 1600px) {
-  .main-rheumatology .container {
+  .content-rheumatology .container {
     padding-bottom: 134px; } }
+
+.content-immunology .container .text-wrapper p {
+  margin-bottom: 20px; }
+  .content-immunology .container .text-wrapper p.last-text {
+    display: none; }
+  .content-immunology .container .text-wrapper p span {
+    font-weight: 500; }
+
+.content-immunology .container .img-wrapper {
+  margin: 30px -15px; }
+  .content-immunology .container .img-wrapper img {
+    width: 100%; }
+
+.content-immunology .container .symptoms-wrapper p {
+  margin-bottom: 6px;
+  font-weight: 500; }
+
+.content-immunology .container .symptoms-wrapper .items-wrapper .li-item {
+  line-height: 1.6;
+  margin-bottom: 15px; }
+
+.content-immunology .container .symptoms-wrapper .items-wrapper:last-child .li-item:last-child {
+  margin-bottom: 0; }
+
+@media only screen and (min-width: 768px) {
+  .content-immunology .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .content-immunology .container .text-wrapper {
+      width: 47%; }
+      .content-immunology .container .text-wrapper p {
+        margin-bottom: 32px; }
+        .content-immunology .container .text-wrapper p:nth-child(3) {
+          font-weight: 500; }
+    .content-immunology .container .img-wrapper {
+      margin: 0; }
+    .content-immunology .container .symptoms-wrapper {
+      margin-top: -10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .content-immunology .container .symptoms-wrapper p {
+        margin-bottom: 40px;
+        width: 100%; }
+      .content-immunology .container .symptoms-wrapper .items-wrapper {
+        width: 42%; }
+        .content-immunology .container .symptoms-wrapper .items-wrapper .li-item {
+          margin-bottom: 20px; }
+          .content-immunology .container .symptoms-wrapper .items-wrapper .li-item::before {
+            top: 9px; }
+        .content-immunology .container .symptoms-wrapper .items-wrapper:last-child .li-item {
+          margin-bottom: 22px; } }
+
+@media only screen and (min-width: 992px) {
+  .content-immunology .container {
+    padding-top: 100px;
+    padding-bottom: 145px; } }
+
+@media only screen and (min-width: 1400px) {
+  .content-immunology .container .text-wrapper {
+    width: 63%; } }
+
+@media only screen and (min-width: 1900px) {
+  .content-immunology .container {
+    padding-bottom: 100px; }
+    .content-immunology .container .text-wrapper p.last-text {
+      display: inline-block; }
+    .content-immunology .container .symptoms-wrapper {
+      margin-top: 55px; } }
