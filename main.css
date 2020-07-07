@@ -1037,6 +1037,38 @@ p {
     @media only screen and (min-width: 576px) {
       .header.page-immunology .mobile-header .container .wrapper-header-image {
         right: 130px; } }
+  .header.page-doctors .mobile-header .container .wrapper-header-image {
+    left: auto;
+    top: auto;
+    bottom: 0; }
+    .header.page-doctors .mobile-header .container .wrapper-header-image.first {
+      width: 102px;
+      height: 146px;
+      right: 112px; }
+    .header.page-doctors .mobile-header .container .wrapper-header-image.second {
+      width: 108px;
+      height: 141px;
+      right: 40px; }
+    .header.page-doctors .mobile-header .container .wrapper-header-image.third {
+      width: 100px;
+      height: 158px;
+      right: -17px; }
+    .header.page-doctors .mobile-header .container .wrapper-header-image img {
+      width: 100%; }
+    @media only screen and (min-width: 480px) {
+      .header.page-doctors .mobile-header .container .wrapper-header-image.first {
+        right: 152px; }
+      .header.page-doctors .mobile-header .container .wrapper-header-image.second {
+        right: 90px; }
+      .header.page-doctors .mobile-header .container .wrapper-header-image.third {
+        right: 33px; } }
+    @media only screen and (min-width: 576px) {
+      .header.page-doctors .mobile-header .container .wrapper-header-image.first {
+        right: 202px; }
+      .header.page-doctors .mobile-header .container .wrapper-header-image.second {
+        right: 140px; }
+      .header.page-doctors .mobile-header .container .wrapper-header-image.third {
+        right: 83px; } }
 
 .main-block-form {
   background: radial-gradient(50.45% 193.65% at 49.55% 50.07%, #5980d0 0%, #3c62af 51.04%, #324c82 100%); }
@@ -1815,3 +1847,142 @@ p {
         margin-top: 35px; }
     .content-allergology .container .disease-items .li-item {
       margin-bottom: 16px; } }
+
+.main-block.main-doctors {
+  position: relative; }
+  .main-block.main-doctors .container .text-wrapper {
+    width: 38%; }
+  .main-block.main-doctors .container .img-doctor {
+    bottom: 0;
+    position: absolute; }
+    .main-block.main-doctors .container .img-doctor.first {
+      right: 190px; }
+    .main-block.main-doctors .container .img-doctor.second {
+      right: 13px; }
+    .main-block.main-doctors .container .img-doctor.third {
+      right: -76px; }
+    @media only screen and (min-width: 1400px) {
+      .main-block.main-doctors .container .img-doctor.first {
+        right: 553px; }
+      .main-block.main-doctors .container .img-doctor.second {
+        right: 313px; }
+      .main-block.main-doctors .container .img-doctor.third {
+        right: 115px; } }
+    @media only screen and (min-width: 1900px) {
+      .main-block.main-doctors .container .img-doctor.first {
+        right: 773px; }
+      .main-block.main-doctors .container .img-doctor.second {
+        right: 533px; }
+      .main-block.main-doctors .container .img-doctor.third {
+        right: 335px; } }
+
+.content-doctors .container .doctor-card .img-desktop {
+  display: none; }
+
+.content-doctors .container .doctor-card .img-wrapper {
+  margin: auto; }
+  .content-doctors .container .doctor-card .img-wrapper img {
+    width: 100%; }
+
+.content-doctors .container .doctor-card ul {
+  margin-bottom: 30px; }
+  .content-doctors .container .doctor-card ul .li-item {
+    line-height: 1.6;
+    margin-bottom: 15px; }
+    .content-doctors .container .doctor-card ul .li-item::before {
+      top: 9px; }
+
+.content-doctors .container .doctor-card .title {
+  margin-bottom: 17px;
+  color: #000000; }
+
+.content-doctors .container .doctor-card .last {
+  color: #5b5959; }
+
+.content-doctors .container .doctor-card .name,
+.content-doctors .container .doctor-card .position {
+  text-align: center;
+  max-width: 270px;
+  margin: 10px auto auto;
+  color: #000000; }
+
+.content-doctors .container .doctor-card .position {
+  margin-bottom: 25px; }
+
+.content-doctors .container .doctor-card.first .img-wrapper {
+  width: 214px; }
+
+.content-doctors .container .doctor-card.second .img-wrapper {
+  width: 200px; }
+
+.content-doctors .container .doctor-card.third .img-wrapper {
+  width: 212px; }
+
+@media only screen and (min-width: 768px) {
+  .content-doctors .container .doctor-card {
+    position: relative; }
+    .content-doctors .container .doctor-card .name,
+    .content-doctors .container .doctor-card .position {
+      text-align: left;
+      max-width: fit-content;
+      margin: 0; }
+    .content-doctors .container .doctor-card .name {
+      line-height: 1;
+      font-weight: 500;
+      font-size: 30px;
+      margin-bottom: 30px; }
+    .content-doctors .container .doctor-card .position {
+      line-height: 1.9;
+      margin-bottom: 20px; }
+    .content-doctors .container .doctor-card .li-item {
+      line-height: 1.9;
+      width: 60%; }
+      .content-doctors .container .doctor-card .li-item::before {
+        top: 10px; }
+    .content-doctors .container .doctor-card .img-wrapper {
+      display: none; }
+    .content-doctors .container .doctor-card .img-desktop {
+      display: block; }
+    .content-doctors .container .doctor-card.first .img-desktop, .content-doctors .container .doctor-card.third .img-desktop {
+      position: absolute;
+      top: 0;
+      right: 0; }
+    .content-doctors .container .doctor-card.first .medium, .content-doctors .container .doctor-card.third .medium {
+      width: 100%; }
+    .content-doctors .container .doctor-card.second {
+      display: flex;
+      justify-content: space-between; }
+      .content-doctors .container .doctor-card.second .text-wrapper {
+        width: 62%; }
+        .content-doctors .container .doctor-card.second .text-wrapper ul .li-item {
+          width: 92%; }
+      .content-doctors .container .doctor-card.second .img-desktop {
+        width: 38%; } }
+
+@media only screen and (max-width: 1399px) {
+  .content-doctors .container .doctor-card:not(:last-child) {
+    margin-bottom: 40px; }
+  .content-doctors .container .doctor-card .img-desktop img {
+    width: 230px; }
+  .content-doctors .container .doctor-card .name {
+    width: 70%; } }
+
+@media only screen and (min-width: 992px) {
+  .content-doctors .container {
+    padding-top: 100px;
+    padding-bottom: 120px; }
+    .content-doctors .container .doctor-card:not(:last-child) {
+      margin-bottom: 120px; } }
+
+@media only screen and (min-width: 1900px) {
+  .content-doctors .container .doctor-card:not(:last-child) {
+    margin-bottom: 80px; }
+    .content-doctors .container .doctor-card:not(:last-child) .name {
+      font-size: 35px; }
+    .content-doctors .container .doctor-card:not(:last-child) .position,
+    .content-doctors .container .doctor-card:not(:last-child) .li-item {
+      font-size: 18px; }
+    .content-doctors .container .doctor-card:not(:last-child) ul {
+      margin-bottom: 40px; }
+      .content-doctors .container .doctor-card:not(:last-child) ul .large {
+        width: 100%; } }
