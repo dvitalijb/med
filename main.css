@@ -1040,7 +1040,7 @@ p {
       top: 0;
       right: 0;
       overflow-x: hidden;
-      background: radial-gradient(50.45% 193.65% at 49.55% 50.07%, #5980d0 0%, #3c62af 51.04%, #324c82 100%);
+      background: linear-gradient(90deg, #334E86 0%, #466CBA 100%);
       display: flex;
       flex-direction: column; }
       .header .mobile-header .side-panel.active {
