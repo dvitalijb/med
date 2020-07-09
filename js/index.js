@@ -1,11 +1,21 @@
 $(document).ready(function () {
   const $menu = $("#menu");
   const $sidePanel = $("#side-panel");
-
+  const form = document.getElementById("form");
+  const formModal = document.getElementById("form-modal");
+  const $greetingCloseButton = $("#greeting-close");
+  const $greetingModal = $("#open-greeting");
+  let email;
+  let name;
+  let tel;
   const isValidMail = (field) =>
     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(field.val().trim());
-  const isValidName = (field) => /^[A-Za-z]+$/.test(field.val().trim());
+  const isValidName = (field) => field.val().trim() !== '';
   const isValidTel = (field) => /^\d{10}$/.test(field.val().trim());
+
+  $greetingCloseButton.on("click", () => {
+    $greetingModal.removeClass("active");
+  });
 
   $(document).mouseup((e) => {
     if (
@@ -21,63 +31,12 @@ $(document).ready(function () {
     $sidePanel.addClass("active");
   });
 
-  const form = document.getElementById("form");
-  const formModal = document.getElementById("form-modal");
-  let email;
-  let name;
-  let tel;
-
-  const showError = () => formErrors.classList.add("active");
   const addClassError = (field) => field[0].classList.add("error");
   const addClassSuccess = (field) => field[0].classList.add("success");
   const removeClassError = (field) => field.classList.remove("error");
   const removeClassSuccess = (field) => field.classList.remove("success");
 
-  // $(form).on("submit", function () {
-  //   event.preventDefault();
-
-  //   for (input of form) {
-  //     removeClassError(input);
-  //     removeClassSuccess(input);
-  //   }
-
-  //   email = $("#email");
-  //   name = $("#name");
-  //   tel = $("#tel");
-
-  //   const isValidMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-  //     email.val().trim()
-  //   );
-  //   const isValidName = /^[A-Za-z]+$/.test(name.val().trim());
-  //   const isValidTel = /^\d{10}$/.test(tel.val().trim());
-
-  //   isValidMail ? addClassSuccess(email) : addClassError(email);
-  //   isValidName ? addClassSuccess(name) : addClassError(name);
-  //   isValidTel ? addClassSuccess(tel) : addClassError(tel);
-
-  //   if (isValidMail && isValidName && isValidTel) {
-  //     let formData = $(form).serialize();
-  //     $.ajax({
-  //       url: "mailer.php",
-  //       data: formData,
-  //       type: "POST",
-  //       success: function (data) {
-  //         alert(data);
-  //       },
-  //       error: function (error) {
-  //         alert(error);
-  //       },
-  //     });
-
-  //     form.reset();
-  //     for (input of form) {
-  //       removeClassError(input);
-  //       removeClassSuccess(input);
-  //     }
-  //   }
-  //   return false;
-  // });
-
+  
   $(form).on("submit", function () {
     event.preventDefault();
 
@@ -100,15 +59,16 @@ $(document).ready(function () {
 
     if (checkName && checkMail && checkTel) {
       let formData = $(form).serialize();
+      $greetingModal.addClass("active")
       $.ajax({
         url: "mailer.php",
         data: formData,
         type: "POST",
         success: function (data) {
-          alert(data);
+          //alert(data);
         },
         error: function (error) {
-          alert(error);
+          //alert('error',error);
         },
       });
 
@@ -143,15 +103,16 @@ $(document).ready(function () {
 
     if (checkName && checkMail && checkTel) {
       let formData = $(formModal).serialize();
+      $greetingModal.addClass("active")
       $.ajax({
         url: "mailer.php",
         data: formData,
         type: "POST",
         success: function (data) {
-          alert(data);
+          //alert(data);
         },
         error: function (error) {
-          alert(error);
+          //alert('error',error);
         },
       });
 

@@ -271,9 +271,15 @@
                 <p>Залиште контакти у формі, наш адміністратор найближчим часом зв'яжеться з Вами.</p>
                 <form action="#" id="form" autocomplete="off">
                     <div class="input-wrapper">
-                        <input id="name" type="text" name="name" placeholder="Ваше ім’я">
-                        <input id="email" type="email" name="email" placeholder="Ваш Е-мейл">
-                        <input id="tel" type="tel" name="tel" placeholder="Номер телефону">
+                        <input id="name" type="text" name="name" placeholder="Ваше ім’я" required>
+                        <div>
+                            <input id="email" type="email" name="email" placeholder="Ваш Е-мейл" required>
+                            <span class="tip">&#9888; приклад example@gmail.com</span>
+                        </div>
+                        <div>
+                            <input id="tel" type="tel" name="tel" placeholder="Номер телефону" required>
+                            <span class="tip">&#9888; приклад 0971234567</span>
+                        </div>
                     </div>
                     <textarea id="request" cols="30" rows="10" placeholder="Ваш запит" name="request"></textarea>
                     <div class="button-wrapper">
@@ -288,6 +294,8 @@
                 </picture>
             </div>
         </div>
+
+                 <!-- The Form Greeting -->
         <div id="open-modal" class="modal-window">
             <div class="form-modal">
                 <div class="title-wrapper">
@@ -302,15 +310,37 @@
                 <form action="#" id="form-modal" autocomplete="off">
                     <div class="input-wrapper">
                         <p>Введіть свої контакти нижче та наш адміністратор зателефонує Вам.</p>
-                        <input type="text" name="name" id="name-modal" placeholder="Ваше ім’я">
-                        <input type="email" name="email" id="email-modal" placeholder="Ваш Е-мейл">
-                        <input type="tel" name="tel" id="tel-modal" placeholder="Ваш Телефон">
+                        <input type="text" name="name" id="name-modal" placeholder="Ваше ім’я" required>
+                        <div>
+                            <input type="email" name="email" id="email-modal" placeholder="Ваш Е-мейл" required>
+                            <span class="tip">&#9888; приклад example@gmail.com</span>
+                          </div>
+                          <div>
+                            <input type="tel" name="tel" id="tel-modal" placeholder="Ваш Телефон" required>
+                             <span class="tip">&#9888; приклад 0971234567</span>
+                          </div>
                         <textarea id="request-modal" cols="30" rows="10" placeholder="Ваш запит" name="request"></textarea>
                         <input type="submit" class="button light" value="Замовити дзвінок">
                     </div>
                 </form>
             </div>
         </div>
+
+         <!-- The Modal Greeting -->
+        <div id="open-greeting" class="greeting-window">
+            <div class="greeting-wrapper">
+              <svg width="125" height="115" viewBox="0 0 125 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="54.3601" cy="60.6403" r="50.4352" stroke="white" stroke-width="7.84983"/>
+                <path d="M91.5 19L84 27L98 46.5L105.5 38L91.5 19Z" fill="#48659F"/>
+                <path d="M55.3416 95.1792C46.8638 74.1416 33.4929 61.4249 27.8672 57.6962L32.1846 43.1741C49.1402 57.6178 55.6687 66.789 56.3228 70.4522C83.0122 30.7321 112.515 7.52275 124.42 0L122.85 16.4846C93.6488 36.5802 65.6772 77.3208 55.3416 95.1792Z" fill="white"/>
+                </svg>
+              <p>Ваше повідомлення успішно відправлено, очікуйте на дзвінок.</p>
+              <a href="#" class="greeting-close" id="greeting-close">
+                <div> </div>
+                <div> </div>
+              </a>
+            </div>
+          </div>
     </main>
     <footer class="footer" id="footer">
         <div class="container">
