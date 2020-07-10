@@ -1388,7 +1388,8 @@ p {
     .immunology .container a {
       margin-top: 20px; }
     .immunology .container .img-wrapper-mobile img {
-      width: 100%; }
+      width: 100%;
+      margin-left: 25px; }
   @media only screen and (max-width: 991px) {
     .immunology h2,
     .immunology a,
