@@ -1234,7 +1234,6 @@ p {
   .header.page-immunology .mobile-header .container .wrapper-header-image {
     width: 234px;
     height: 172px;
-    top: -5px;
     right: -4px;
     left: auto; }
     @media only screen and (min-width: 480px) {
@@ -1446,7 +1445,8 @@ p {
 .allergology .container .text-wrapper .img-wrapper-mobile {
   margin: 30px 0; }
   .allergology .container .text-wrapper .img-wrapper-mobile img {
-    width: 100%; }
+    width: 100%;
+    margin-left: -21px; }
 
 @media only screen and (min-width: 992px) {
   .allergology {

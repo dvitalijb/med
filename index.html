@@ -20,7 +20,9 @@
               d="M4.5 0C2.01875 0 0 2.09352 0 4.66668C0 5.43914 0.186231 6.20504 0.540263 6.88436L4.25392 13.8496C4.30335 13.9425 4.39756 14 4.5 14C4.60244 14 4.69665 13.9425 4.74608 13.8496L8.46111 6.88207C8.81377 6.20504 9 5.43911 9 4.66665C9 2.09352 6.98125 0 4.5 0ZM4.5 7C3.25937 7 2.25001 5.95325 2.25001 4.66668C2.25001 3.3801 3.25937 2.33335 4.5 2.33335C5.74063 2.33335 6.74999 3.3801 6.74999 4.66668C6.74999 5.95325 5.74063 7 4.5 7Z"
               fill="white" />
           </svg>
-          <a href="#footer"><p class="contact">м. Львів, вул. Нечуя-Левицького, 4</p></a>
+          <a href="#footer">
+            <p class="contact">м. Львів, вул. Нечуя-Левицького, 4</p>
+          </a>
         </div>
         <div class="wrapper-img">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -291,10 +293,7 @@
           <p>Імунна система — це система “особливого нагляду”, яка забезпечує індивідуальність та цілісність організму
             шляхом захисту організму від генетично чужорідного впливу внутрішнього і зовнішнього середовища.</p>
           <div class="img-wrapper-mobile">
-            <picture>
-              <source media="(min-width:580px)" srcset="img/home/girl_k_medium.png">
-              <img src="img/home/girl_k_small.png" alt="Girl in kimano">
-            </picture>
+            <img src="img/home/girl_k_medium.png" alt="Girl in kimano">
           </div>
           <p>Імунітет здатний розпізнавати й блокувати будь який чужорідний фактор у нашому організмі. Мати міцний
             імунітет є важливо.</p>
@@ -316,7 +315,7 @@
             речовини не тільки безпечні, але й нешкідливі, у разі гіперреактивності вони, відповідно, виступають у
             якості алергену і спричинюють специфічну реакцію на них зі сторони імунної системи.</p>
           <div class="img-wrapper-mobile">
-            <img src="img/home/man_small.png" alt="Man">
+            <img src="img/home/man_large.png" alt="Man">
           </div>
           <p>Компоненти імунної системи сприймають їх як загрозу, а тому запускають певну реакцію з їх відторгнення. В
             результаті такої реакції певними клітинами організму починають вироблятися особливого типу речовини —
@@ -384,13 +383,13 @@
         <h2>Ліцензія</h2>
         <div class="card-wrapper">
           <div class="img-wrapper">
-              <img src="img/home/doc-1-min.jpg" alt="Ліцензія" id="imgFirst">
+            <img src="img/home/doc-1-min.jpg" alt="Ліцензія" id="imgFirst">
           </div>
           <div class="img-wrapper">
-              <img src="img/home/doc-2-min.png" alt="Документ" id="imgSecond">
+            <img src="img/home/doc-2-min.png" alt="Документ" id="imgSecond">
           </div>
           <div class="img-wrapper">
-              <img src="img/home/doc-3-min.png" alt="Виписка" id="imgThird">
+            <img src="img/home/doc-3-min.png" alt="Виписка" id="imgThird">
           </div>
         </div>
       </div>
@@ -465,59 +464,61 @@
       </div>
     </section>
 
-     <!-- The Modal Form -->
+    <!-- The Modal Form -->
     <div id="open-modal" class="modal-window">
       <div class="form-modal">
-          <div class="title-wrapper">
-              <h3 class="title">
-                  Заповніть форму
-              </h3>
-              <a href="#" class="modal-close">
-                  <div> </div>
-                  <div> </div>
-              </a>
+        <div class="title-wrapper">
+          <h3 class="title">
+            Заповніть форму
+          </h3>
+          <a href="#" class="modal-close">
+            <div> </div>
+            <div> </div>
+          </a>
+        </div>
+        <form action="#" id="form-modal" autocomplete="off">
+          <div class="input-wrapper">
+            <p>Введіть свої контакти нижче та наш адміністратор зателефонує Вам.</p>
+            <input type="text" name="name" id="name-modal" placeholder="Ваше ім’я" required>
+            <div>
+              <input type="email" name="email" id="email-modal" placeholder="Ваш Е-мейл" required>
+              <span class="tip">&#9888; приклад example@gmail.com</span>
+            </div>
+            <div>
+              <input type="tel" name="tel" id="tel-modal" placeholder="Ваш Телефон" required>
+              <span class="tip">&#9888; приклад 0971234567</span>
+            </div>
+            <textarea id="request-modal" cols="30" rows="10" placeholder="Ваш запит" name="request"></textarea>
+            <input type="submit" class="button light" value="Замовити дзвінок">
           </div>
-          <form action="#" id="form-modal" autocomplete="off">
-              <div class="input-wrapper">
-                  <p>Введіть свої контакти нижче та наш адміністратор зателефонує Вам.</p>
-                  <input type="text" name="name" id="name-modal" placeholder="Ваше ім’я"required>
-                  <div>
-                    <input type="email" name="email" id="email-modal" placeholder="Ваш Е-мейл"required>
-                    <span class="tip">&#9888; приклад example@gmail.com</span>
-                  </div>
-                  <div>
-                    <input type="tel" name="tel" id="tel-modal" placeholder="Ваш Телефон"required>
-                     <span class="tip">&#9888; приклад 0971234567</span>
-                  </div>
-                  <textarea id="request-modal" cols="30" rows="10" placeholder="Ваш запит" name="request"></textarea>
-                  <input type="submit" class="button light" value="Замовити дзвінок">
-              </div>
-          </form>
+        </form>
       </div>
-  </div>
-
-  <!-- The Modal Greeting -->
-  <div id="open-greeting" class="greeting-window">
-    <div class="greeting-wrapper">
-      <svg width="125" height="115" viewBox="0 0 125 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="54.3601" cy="60.6403" r="50.4352" stroke="white" stroke-width="7.84983"/>
-        <path d="M91.5 19L84 27L98 46.5L105.5 38L91.5 19Z" fill="#48659F"/>
-        <path d="M55.3416 95.1792C46.8638 74.1416 33.4929 61.4249 27.8672 57.6962L32.1846 43.1741C49.1402 57.6178 55.6687 66.789 56.3228 70.4522C83.0122 30.7321 112.515 7.52275 124.42 0L122.85 16.4846C93.6488 36.5802 65.6772 77.3208 55.3416 95.1792Z" fill="white"/>
-        </svg>
-      <p>Ваше повідомлення успішно відправлено, очікуйте на дзвінок.</p>
-      <a href="#" class="greeting-close" id="greeting-close">
-        <div> </div>
-        <div> </div>
-      </a>
     </div>
-  </div>
 
-  <!-- The Modal IMG -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
+    <!-- The Modal Greeting -->
+    <div id="open-greeting" class="greeting-window">
+      <div class="greeting-wrapper">
+        <svg width="125" height="115" viewBox="0 0 125 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="54.3601" cy="60.6403" r="50.4352" stroke="white" stroke-width="7.84983" />
+          <path d="M91.5 19L84 27L98 46.5L105.5 38L91.5 19Z" fill="#48659F" />
+          <path
+            d="M55.3416 95.1792C46.8638 74.1416 33.4929 61.4249 27.8672 57.6962L32.1846 43.1741C49.1402 57.6178 55.6687 66.789 56.3228 70.4522C83.0122 30.7321 112.515 7.52275 124.42 0L122.85 16.4846C93.6488 36.5802 65.6772 77.3208 55.3416 95.1792Z"
+            fill="white" />
+        </svg>
+        <p>Ваше повідомлення успішно відправлено, очікуйте на дзвінок.</p>
+        <a href="#" class="greeting-close" id="greeting-close">
+          <div> </div>
+          <div> </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- The Modal IMG -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
   </main>
   <footer class="footer" id="footer">
     <div class="container">
@@ -601,4 +602,5 @@
   <script src="js/modalImg.js"></script>
   <script src="js/scrollHeader.js"></script>
 </body>
+
 </html>
