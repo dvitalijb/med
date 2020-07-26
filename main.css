@@ -1313,7 +1313,7 @@ p {
         flex-wrap: wrap;
         width: 60%; }
         .rheumatology .container .text-wrapper p {
-          font-size: 20px;
+          font-size: 16px;
           margin-top: 32px;
           margin-bottom: 30px; }
         .rheumatology .container .text-wrapper .wrapper-items {
@@ -1342,7 +1342,8 @@ p {
         .rheumatology .container .text-wrapper {
           padding-left: 10px; }
           .rheumatology .container .text-wrapper p {
-            margin-top: 10px; }
+            margin-top: 10px;
+            font-size: 20px; }
         .rheumatology .container .wrapper-items {
           width: 50%; }
         .rheumatology .container .img-wrapper {
@@ -1554,7 +1555,7 @@ p {
     margin-right: 15px; }
   .immunologists .container .card-wrapper {
     display: flex;
-    overflow: hidden;
+    overflow: scroll;
     text-align: center;
     margin-top: 35px; }
     .immunologists .container .card-wrapper figure:not(:last-child) {
@@ -1579,7 +1580,14 @@ p {
     color: #4162a4;
     text-decoration: underline;
     text-transform: capitalize;
-    background: none; } }
+    background: none; }
+  .immunologists .container .card-wrapper .name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.6; }
+  .immunologists .container .card-wrapper .spec {
+    font-weight: normal;
+    font-size: 18px; } }
 
 @media only screen and (min-width: 992px) {
   .immunologists .container .link {
