@@ -1243,37 +1243,12 @@ p {
       .header.page-immunology .mobile-header .container .wrapper-header-image {
         right: 130px; } }
   .header.page-doctors .mobile-header .container .wrapper-header-image {
+    height: 195px;
+    width: 288px;
     left: auto;
-    top: auto;
-    bottom: 0; }
-    .header.page-doctors .mobile-header .container .wrapper-header-image.first {
-      width: 102px;
-      height: 146px;
-      right: 112px; }
-    .header.page-doctors .mobile-header .container .wrapper-header-image.second {
-      width: 108px;
-      height: 141px;
-      right: 40px; }
-    .header.page-doctors .mobile-header .container .wrapper-header-image.third {
-      width: 100px;
-      height: 158px;
-      right: -17px; }
+    right: 0; }
     .header.page-doctors .mobile-header .container .wrapper-header-image img {
       width: 100%; }
-    @media only screen and (min-width: 480px) {
-      .header.page-doctors .mobile-header .container .wrapper-header-image.first {
-        right: 152px; }
-      .header.page-doctors .mobile-header .container .wrapper-header-image.second {
-        right: 90px; }
-      .header.page-doctors .mobile-header .container .wrapper-header-image.third {
-        right: 33px; } }
-    @media only screen and (min-width: 576px) {
-      .header.page-doctors .mobile-header .container .wrapper-header-image.first {
-        right: 202px; }
-      .header.page-doctors .mobile-header .container .wrapper-header-image.second {
-        right: 140px; }
-      .header.page-doctors .mobile-header .container .wrapper-header-image.third {
-        right: 83px; } }
 
 .nav-up {
   top: -195px; }
@@ -1580,9 +1555,12 @@ p {
   .immunologists .container .card-wrapper {
     display: flex;
     overflow: hidden;
-    text-align: center; }
+    text-align: center;
+    margin-top: 35px; }
+    .immunologists .container .card-wrapper figure:not(:last-child) {
+      margin-right: 34px; }
     .immunologists .container .card-wrapper img {
-      height: 368px;
+      height: 285px;
       margin-bottom: 10px; }
     .immunologists .container .card-wrapper span {
       display: block; }
@@ -1628,10 +1606,16 @@ p {
       z-index: -1; }
     .immunologists .container {
       padding-top: 120px; }
-      .immunologists .container .card-wrapper .name,
-      .immunologists .container .card-wrapper .spec {
-        color: #ffffff;
-        font-size: 18px; } }
+      .immunologists .container .card-wrapper {
+        margin-top: 35px; }
+        .immunologists .container .card-wrapper figure:not(:last-child) {
+          margin-right: 34px; }
+        .immunologists .container .card-wrapper img {
+          height: 431px; }
+        .immunologists .container .card-wrapper .name,
+        .immunologists .container .card-wrapper .spec {
+          color: #ffffff;
+          font-size: 18px; } }
 
 @media only screen and (min-width: 1900px) {
   .immunologists .container .name,
@@ -2146,27 +2130,8 @@ p {
     width: 38%; }
   .main-block.main-doctors .container .img-doctor {
     bottom: 0;
-    position: absolute; }
-    .main-block.main-doctors .container .img-doctor.first {
-      right: 190px; }
-    .main-block.main-doctors .container .img-doctor.second {
-      right: 13px; }
-    .main-block.main-doctors .container .img-doctor.third {
-      right: -76px; }
-    @media only screen and (min-width: 1400px) {
-      .main-block.main-doctors .container .img-doctor.first {
-        right: 553px; }
-      .main-block.main-doctors .container .img-doctor.second {
-        right: 313px; }
-      .main-block.main-doctors .container .img-doctor.third {
-        right: 115px; } }
-    @media only screen and (min-width: 1900px) {
-      .main-block.main-doctors .container .img-doctor.first {
-        right: 773px; }
-      .main-block.main-doctors .container .img-doctor.second {
-        right: 533px; }
-      .main-block.main-doctors .container .img-doctor.third {
-        right: 335px; } }
+    position: absolute;
+    right: 0; }
 
 .content-doctors .container .doctor-card .img-desktop {
   display: none; }
