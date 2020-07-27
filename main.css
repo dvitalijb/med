@@ -1580,14 +1580,15 @@ p {
     text-decoration: underline;
     text-transform: capitalize;
     background: none; }
-  .immunologists .container .card-wrapper .name {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 1.6;
+  .immunologists .container .card-wrapper {
     overflow: hidden; }
-  .immunologists .container .card-wrapper .spec {
-    font-weight: normal;
-    font-size: 18px; } }
+    .immunologists .container .card-wrapper .name {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 1.6; }
+    .immunologists .container .card-wrapper .spec {
+      font-weight: normal;
+      font-size: 18px; } }
 
 @media only screen and (min-width: 992px) {
   .immunologists .container .link {
