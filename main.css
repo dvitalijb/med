@@ -1547,7 +1547,6 @@ p {
       margin-top: 5px; } }
 
 .immunologists .container {
-  padding-right: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
@@ -1584,7 +1583,8 @@ p {
   .immunologists .container .card-wrapper .name {
     font-weight: bold;
     font-size: 18px;
-    line-height: 1.6; }
+    line-height: 1.6;
+    overflow: hidden; }
   .immunologists .container .card-wrapper .spec {
     font-weight: normal;
     font-size: 18px; } }
@@ -1634,7 +1634,6 @@ p {
   background-color: #e7f7fe;
   overflow: hidden; }
   .license .container {
-    padding-right: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
@@ -2136,6 +2135,9 @@ p {
   position: relative; }
   .main-block.main-doctors .container .text-wrapper {
     width: 38%; }
+    @media only screen and (min-width: 992px) {
+      .main-block.main-doctors .container .text-wrapper {
+        width: 100%; } }
   .main-block.main-doctors .container .img-doctor {
     bottom: 0;
     position: absolute;
